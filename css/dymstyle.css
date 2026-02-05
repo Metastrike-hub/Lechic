@@ -57,6 +57,19 @@ h1{
     color: #D8A1A5;
 }
 
+
+.centered-text-hero3-title{
+    font-size: 30px;
+        line-height: 1.4;
+    letter-spacing: 0.5px;
+       font-family: 'Amoresa';  
+}
+.centered-text-hero3{
+    font-size: 25px;
+        line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
 .container {
     display: flex;
     justify-content: center;
