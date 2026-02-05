@@ -37,6 +37,11 @@ h1{
     font-weight: 100;
 }
 
+.centered-text-hero2{
+    font-size: 40px;
+     line-height: 1.4;
+    letter-spacing: 0.5px;
+}
 
 .centered-text-hero {
     font-size: 30px;
