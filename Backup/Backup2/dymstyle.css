@@ -1,0 +1,152 @@
+/* =========================
+   FONT
+   ========================= */
+@font-face {
+  font-family: 'Amoresa';
+  src: url('../fonts/Amoresa.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =========================
+   GLOBAL RESET
+   ========================= */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 200vh;
+  padding: 0;
+}
+
+/* =========================
+   CORNER BORDERS
+   ========================= */
+.corner {
+  position: fixed;
+  width: 20vw;
+  max-width: 200px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.corner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+/* =========================
+   HERO 2
+   ========================= */
+.hero2 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+}
+
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Amoresa', sans-serif;
+}
+
+.responsive-image {
+  display: block;
+  width: clamp(250px, 50%, 500px);
+  height: auto;
+  margin: 0 auto;
+}
+
+/* =========================
+   HERO 3
+   ========================= */
+.hero3 {
+  min-height: 100vh;
+  background-color: #f6b1c8;
+}
+
+/* =========================
+   COUNTDOWN HERO
+   ========================= */
+.hero {
+  height: 100vh;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-family: 'Amoresa', sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.timebox {
+  display: flex;
+  gap: 90px;
+}
+
+.time {
+  text-align: center;
+}
+
+.time h2 {
+  font-size: 5rem;
+  font-weight: 100;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 600px) {
+  .corner {
+    width: 30vw;
+  }
+
+  .timebox {
+    gap: 30px;
+  }
+}
