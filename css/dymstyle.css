@@ -18,9 +18,9 @@
     color: #000000;
 }
 h1{
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
 }
 
 .timebox{
@@ -44,7 +44,7 @@ h1{
 }
 
 .centered-text-hero {
-    font-size: 30px;
+    font-size: 40px;
         line-height: 1.4;
     letter-spacing: 0.5px;
     font-family: 'Amoresa';   
