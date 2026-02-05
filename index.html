@@ -4,104 +4,8 @@
   <meta charset="UTF-8">
   <title>Save the Date</title>
 
-  <!-- External CSS if you already have one -->
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/dymstyle.css">
-
-  <style>
-    body {
-      min-height: 200vh;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* === CORNER BORDERS (GLOBAL) === */
-    .corner {
-      position: fixed;
-      width: 20vw;
-      max-width: 200px;
-      z-index: 9999;
-      pointer-events: none;
-    }
-
-    .corner img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .top-left {
-      top: 0;
-      left: 0;
-      transform: scaleY(-1);
-    }
-
-    .top-right {
-      top: 0;
-      right: 0;
-    }
-
-    .bottom-left {
-      bottom: 0;
-      left: 0;
-    }
-
-    .bottom-right {
-      bottom: 0;
-      right: 0;
-      transform: scaleX(-1);
-    }
-
-    /* === HERO 2 CONTENT === */
-    .hero2 {
-    min-height: 100vh;              /* full screen */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;        /* vertical centering */
-    align-items: center;            /* horizontal centering */
-    background-color: #ffffff;      /* white */
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    padding: 40px;                  /* small padding for mobile */
-    }
-
-    /* HERO 3 – pink section */
-    .hero3 {
-    min-height: 100vh;
-    background-color: #f6b1c8;      /* soft pink (change if needed) */
-    }
-
-    .centered-text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: 'Amoresa';
-    }
-
-    .responsive-image {
-      display: block;
-      width: clamp(250px, 50%, 500px);
-      height: auto;
-      margin: 0 auto;
-    }
-
-    @font-face {
-    font-family: 'Amoresa';
-    src: url('../fonts/Amoresa.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-    h1 {
-      font-family: 'Amoresa', sans-serif;
-    }
-
-    @media (max-width: 600px) {
-      .corner {
-        width: 30vw;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -120,16 +24,14 @@
     <img src="images/f23.svg" alt="Esquina inferior derecha">
   </div>
 
-  <!-- === HERO 2 (YOUR REQUESTED CONTENT) === -->
-    <div class="hero2">
+  <!-- === HERO 2 === -->
+  <div class="hero2">
     <h1 class="centered-text">Prueba</h1>
     <img src="images/dym.svg" class="responsive-image" />
-    <p class="centered-text">
-        Prueba
-    </p>
-    </div>
+    <p class="centered-text">Prueba</p>
+  </div>
 
-  <!-- === HERO 3 (EMPTY FOR NOW) === -->
+  <!-- === HERO 3 === -->
   <div class="hero3"></div>
 
   <!-- === COUNTDOWN HERO === -->
