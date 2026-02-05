@@ -1,33 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Save the Date</title>
 
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="hero">
-            <h1>Save the date</h1>
-            <div class="timebox">
-                <div class="time">
-                    <h2 id="days">00</h2>
-                    <p>Days</pp>
-                </div>
-                <div class="time">
-                    <h2 id="hours">00</h2>
-                    <p>Hours</pp>
-                </div>
-                <div class="time">
-                    <h2 id="minutes">00</h2>
-                    <p>Minutes</pp>
-                </div>
-                <div class="time">
-                    <h2 id="seconds">00</h2>
-                    <p>Seconds</pp>
-                </div>
-                                                
-            </div> 
-        </div>
-        
-        <script src="script.js"></script>
-    </body>
+  <!-- External CSS if you already have one -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      min-height: 200vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* === CORNER BORDERS (GLOBAL) === */
+    .corner {
+      position: fixed;
+      width: 20vw;
+      max-width: 200px;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .corner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .top-left {
+      top: 0;
+      left: 0;
+      transform: scaleY(-1);
+    }
+
+    .top-right {
+      top: 0;
+      right: 0;
+    }
+
+    .bottom-left {
+      bottom: 0;
+      left: 0;
+    }
+
+    .bottom-right {
+      bottom: 0;
+      right: 0;
+      transform: scaleX(-1);
+    }
+
+    /* === HERO 2 CONTENT === */
+    .hero2 {
+    min-height: 100vh;              /* full screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;        /* vertical centering */
+    align-items: center;            /* horizontal centering */
+    background-color: #ffffff;      /* white */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 40px;                  /* small padding for mobile */
+    }
+
+    /* HERO 3 – pink section */
+    .hero3 {
+    min-height: 100vh;
+    background-color: #f6b1c8;      /* soft pink (change if needed) */
+    }
+
+    .centered-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Amoresa';
+    }
+
+    .responsive-image {
+      display: block;
+      width: clamp(250px, 50%, 500px);
+      height: auto;
+      margin: 0 auto;
+    }
+
+    @font-face {
+      font-family: 'Amoresa';
+      src: url('Amoresa.otf') format('opentype');
+    }
+
+    h1 {
+      font-family: 'Amoresa', sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      .corner {
+        width: 30vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- === FIXED PAGE BORDERS === -->
+  <div class="corner top-left">
+    <img src="f23.svg" alt="Esquina superior izquierda">
+  </div>
+  <div class="corner top-right">
+    <img src="ftop-izquierda.svg" alt="Esquina superior derecha">
+  </div>
+  <div class="corner bottom-left">
+    <img src="f23.svg" alt="Esquina inferior izquierda">
+  </div>
+  <div class="corner bottom-right">
+    <img src="f23.svg" alt="Esquina inferior derecha">
+  </div>
+
+  <!-- === HERO 2 (YOUR REQUESTED CONTENT) === -->
+    <div class="hero2">
+    <h1 class="centered-text">Contenido del sitio</h1>
+    <img src="title.svg" class="responsive-image" />
+    <p class="centered-text">
+        Desplázate hacia abajo para ver cómo los elementos siguen en las esquinas.
+    </p>
+    </div>
+
+  <!-- === HERO 3 (EMPTY FOR NOW) === -->
+  <div class="hero3"></div>
+
+  <!-- === COUNTDOWN HERO === -->
+  <div class="hero">
+    <h1>Save the date</h1>
+    <div class="timebox">
+      <div class="time">
+        <h2 id="days">00</h2>
+        <p>Days</p>
+      </div>
+      <div class="time">
+        <h2 id="hours">00</h2>
+        <p>Hours</p>
+      </div>
+      <div class="time">
+        <h2 id="minutes">00</h2>
+        <p>Minutes</p>
+      </div>
+      <div class="time">
+        <h2 id="seconds">00</h2>
+        <p>Seconds</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
