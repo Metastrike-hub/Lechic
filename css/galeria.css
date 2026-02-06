@@ -20,7 +20,7 @@
 }
 
 /* Responsive móvil */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .gallery {
     grid-template-columns: 1fr;
   }
