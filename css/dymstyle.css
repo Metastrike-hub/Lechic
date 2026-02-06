@@ -85,6 +85,13 @@ h1{
 
 
 
+.bottom-image2 {
+    max-width: 20%;
+    height: auto;
+}
+
+
+
 
 @media (max-width: 768px) {
   .grid {
@@ -130,3 +137,6 @@ h1{
 
   animation: pulse 2s infinite;
 }
+
+
+
