@@ -22,3 +22,28 @@ function timer(){
 }
 
 setInterval(timer,1000);
+
+
+  const music = document.getElementById('music');
+  const btn = document.getElementById('playBtn');
+
+  btn.addEventListener('click', () => {
+    if (music.paused) {
+      music.play();
+    } else {
+      music.pause();
+    }
+  });
+
+
+  const music2 = document.getElementById('music2');
+  const btn2 = document.getElementById('playBtn2');
+
+  btn2.addEventListener('click', () => {
+    if (music2.paused) {
+      music2.play();
+    } else {
+      music2.pause();
+    }
+  });
+
