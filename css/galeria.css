@@ -51,3 +51,8 @@
   color: white;
   cursor: pointer;
 }
+
+
+.no-scroll {
+  overflow: hidden;
+}

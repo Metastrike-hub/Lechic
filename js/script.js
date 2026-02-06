@@ -58,15 +58,19 @@ images.forEach(img => {
   img.addEventListener("click", () => {
     modal.style.display = "flex";
     modalImg.src = img.src;
+    document.body.classList.add("no-scroll");
   });
 });
 
-close.addEventListener("click", () => {
+function closeModal() {
   modal.style.display = "none";
-});
+  document.body.classList.remove("no-scroll");
+}
+
+close.addEventListener("click", closeModal);
 
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
-    modal.style.display = "none";
+    closeModal();
   }
-});  
+});
