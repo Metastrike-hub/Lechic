@@ -19,7 +19,7 @@
       position: fixed;
       width: 20vw;
       max-width: 200px;
-      z-index: 9999;
+      z-index: 9000;
       pointer-events: none;
     }
 
@@ -291,17 +291,9 @@
     
    
    
-   <div class="gallery">
-  <img src="images/foto1.png" alt="Imagen 1">
-  <img src="images/foto2.png" alt="Imagen 2">
-  <img src="images/foto3.png" alt="Imagen 3">
-  <img src="images/foto4.png" alt="Imagen 4">
-</div>
+
   
-  <div class="modal" id="modal">
-  <span class="close">&times;</span>
-  <img class="modal-img" id="modalImg">
-</div>
+
 
    
    <div class="container">
@@ -316,6 +308,12 @@
   </div>
 
 
+     <div class="gallery">
+  <img src="images/foto1.png" alt="Imagen 1">
+  <img src="images/foto2.png" alt="Imagen 2">
+  <img src="images/foto3.png" alt="Imagen 3">
+  <img src="images/foto4.png" alt="Imagen 4">
+</div>
 
 
 
@@ -331,8 +329,12 @@
     <img src="images/myd.png" alt="Decoration" class="bottom-image">
     </div>
     </div>
-
+  <div class="modal" id="modal" aria-hidden="true">
+    <span class="close" aria-label="Cerrar">&times;</span>
+    <img class="modal-img" id="modalImg" alt="Imagen ampliada">
+  </div>
 
   <script src="js/script.js"></script>
+
 </body>
 </html>

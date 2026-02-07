@@ -9,50 +9,49 @@
 
 .gallery img {
   width: 100%;
-  aspect-ratio: 2 / 3; /* puedes cambiar a 1/1 o 3/2 */
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 16px;
-  transition: transform 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .gallery img:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
-
 /* Responsive móvil */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .gallery {
     grid-template-columns: 1fr;
   }
 }
 
-/* Modal */
+/* MODAL */
 .modal {
   display: none;
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 20000; 
 }
 
 .modal-img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 92vw;
+  max-height: 92vh;
   border-radius: 12px;
 }
 
+
 .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 35px;
+  position: fixed;             /* fijo a la pantalla */
+  top: 16px;
+  right: 18px;
+  font-size: 40px;
   color: white;
   cursor: pointer;
-}
-
-
-.no-scroll {
-  overflow: hidden;
+  z-index: 20001;
 }

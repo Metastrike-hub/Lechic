@@ -48,23 +48,45 @@ setInterval(timer,1000);
   });
 
 
-
 const images = document.querySelectorAll(".gallery img");
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modalImg");
 const close = document.querySelector(".close");
 
+/* PREVENIR SCROLL REAL (móvil + desktop) */
+function preventScroll(e) {
+  e.preventDefault();
+}
+
+function lockScroll() {
+  document.documentElement.classList.add("no-scroll");
+  document.body.classList.add("no-scroll");
+
+  window.addEventListener("wheel", preventScroll, { passive: false });
+  window.addEventListener("touchmove", preventScroll, { passive: false });
+}
+
+function unlockScroll() {
+  document.documentElement.classList.remove("no-scroll");
+  document.body.classList.remove("no-scroll");
+
+  window.removeEventListener("wheel", preventScroll, { passive: false });
+  window.removeEventListener("touchmove", preventScroll, { passive: false });
+}
+
+/* ABRIR MODAL */
 images.forEach(img => {
   img.addEventListener("click", () => {
     modal.style.display = "flex";
     modalImg.src = img.src;
-    document.body.classList.add("no-scroll");
+    lockScroll();
   });
 });
 
+/* CERRAR MODAL */
 function closeModal() {
   modal.style.display = "none";
-  document.body.classList.remove("no-scroll");
+  unlockScroll();
 }
 
 close.addEventListener("click", closeModal);
