@@ -36,16 +36,7 @@ setInterval(timer,1000);
   });
 
 
-  const music2 = document.getElementById('music2');
-  const btn2 = document.getElementById('playBtn2');
-
-  btn2.addEventListener('click', () => {
-    if (music2.paused) {
-      music2.play();
-    } else {
-      music2.pause();
-    }
-  });
+ 
 
 
 const images = document.querySelectorAll(".gallery img");

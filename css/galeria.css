@@ -40,12 +40,19 @@
 }
 
 .modal-img {
+  width: auto;
+  height: auto;
   max-width: 92vw;
   max-height: 92vh;
-  border-radius: 12px;
+  border-radius: 16px;
 }
-
-
+@media (max-width: 768px) {
+  .modal-img {
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+}
 .close {
   position: fixed;             /* fijo a la pantalla */
   top: 16px;
