@@ -87,6 +87,30 @@ h1{
   padding: 24px 0;
 }
 
+
+.container-ring {
+  position: relative;      
+  width: 100%;
+  min-height: 100vh;       
+}
+
+
+.ring-image {
+  position: absolute;
+  bottom: 32px;           /* AJUSTA AQUÍ */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .ring-img {
+    width: 90px;
+    bottom: 20px;
+  }
+}
+
 .bottom-image {
   max-width: 90%;
   height: auto;
