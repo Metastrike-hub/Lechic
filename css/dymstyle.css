@@ -80,12 +80,11 @@ h1{
     letter-spacing: 0.5px;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 24px 0;
-}
+.container { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 24px 0; }
 
 
 .container-ring {
@@ -95,26 +94,13 @@ h1{
 }
 
 
-.ring-image {
+.ring-img {
   position: absolute;
   bottom: 32px;           /* AJUSTA AQUÍ */
   left: 50%;
   transform: translateX(-50%);
   width: 120px;
   cursor: pointer;
-}
-
-@media (max-width: 768px) {
-
-  .hero2{
-    height: 100svh;      /* mejor que 100vh en móviles */
-    min-height: 0;       /* evita que se “estire” más */
-    padding: 20px 16px 80px;  /* espacio abajo para que el anillo quepa */
-  }
-  .ring-img {
-    width: 90px;
-    bottom: calc(16px + env(safe-area-inset-bottom));
-  }
 }
 
 .bottom-image {
