@@ -69,7 +69,8 @@ function unlockScroll() {
 images.forEach(img => {
   img.addEventListener("click", () => {
     modal.style.display = "flex";
-    modalImg.src = img.src;
+    const full = img.dataset.full || img.src;
+    modalImg.src = full;
     lockScroll();
   });
 });

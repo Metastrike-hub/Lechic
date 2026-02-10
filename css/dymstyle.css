@@ -59,6 +59,14 @@ h1{
     font-family: 'Amoresa';   
 }
 
+
+.centered-text-hero-vestuario {
+    font-size: 30px;
+        line-height: 1.4;
+    letter-spacing: 0.5px;
+    font-family: 'GildaDisplay'; 
+}
+
 .centered-text-hero1{
     font-size: 24px;
      line-height: 1.4;
