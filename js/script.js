@@ -88,3 +88,22 @@ modal.addEventListener("click", (e) => {
     closeModal();
   }
 });
+
+
+
+window.addEventListener("load", function() {
+  const music = document.getElementById("music-og");
+  
+  // Intentar reproducir
+  music.play().then(() => {
+    // Quitar mute después de iniciar
+    music.muted = false;
+  }).catch(error => {
+    console.log("Autoplay bloqueado");
+  });
+});
+
+
+window.addEventListener("click", function() {
+  music.play();
+}, { once: true });
