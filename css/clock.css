@@ -1,0 +1,55 @@
+html, body {
+  width: 100%;
+  background: #FFFBF7;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+.sector-clock{
+    height: 100vh;
+
+    background-color: #FFFBF7;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+}
+
+.gran-dia {
+    font-size: 35px;
+    font-family: 'Amoresa', sans-serif;
+} 
+
+.timebox{
+    display: flex;
+    gap: 90px;
+}
+
+.time{
+    text-align: center;
+}
+
+.centered-text-hero {
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    font-family: 'Amoresa';   
+}
+
+.responsive-image {
+      display: block;
+      width: clamp(250px, 50%, 500px);
+      height: auto;
+      margin: 0 auto;
+}
+
+
+.centered-text-hero1{
+    font-size: 24px;
+     line-height: 1.4;
+    letter-spacing: 0.5px;
+    color: #D8A1A5;
+    font-family: 'GildaDisplay';   
+}

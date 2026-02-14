@@ -1,169 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Save the Date</title>
 
-  <!-- External CSS if you already have one -->
-  <link rel="stylesheet" href="css/dymstyle.css">
+  <!-- TUS CSS ORIGINALES -->
+  <link rel="stylesheet" href="css/sector-feylu.css">   
+  <link rel="stylesheet" href="css/border.css">
+  <link rel="stylesheet" href="css/envelope.css">
+  <link rel="stylesheet" href="css/clock.css">
+  <link rel="stylesheet" href="css/fonts.css">
+
   <link rel="stylesheet" href="css/galeria.css">
-  <style>
-    body {
-      min-height: 200vh;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* === CORNER BORDERS (GLOBAL) === */
-    .corner {
-      position: fixed;
-      width: 20vw;
-      max-width: 200px;
-      z-index: 9000;
-      pointer-events: none;
-    }
-
-    .corner img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .top-left {
-      top: 0;
-      left: 0;
-      transform: scaleY(-1);
-    }
-
-    .top-right {
-      top: 0;
-      right: 0;
-    }
-
-    .bottom-left {
-      bottom: 0;
-      left: 0;
-    }
-
-    .bottom-right {
-      bottom: 0;
-      right: 0;
-      transform: scaleX(-1);
-    }
-
-    /* === HERO 2 CONTENT === */
-    .hero2 {
-    min-height: 100vh;              /* full screen */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;        /* vertical centering */
-    align-items: center;            /* horizontal centering */
-    background-color: #FFFBF7;      /* white */
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    padding: 40px;                  /* small padding for mobile */
-    }
-
-    /* HERO 3 – pink section */
-    .hero3 {
-    min-height: 100vh;
-    background-color: #FFFBF7;      /* soft pink (change if needed) */
-    }
-
-    .centered-text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: 'Amoresa';
-    }
-    .responsive-image-home {
-      display: block;
-      width: clamp(250px, 70%, 700px);
-      height: auto;
-      margin: 0 auto;
-    }
-    .responsive-image-regalos {
-      display: block;
-      width: clamp(450px, 90%, 1200px);
-      height: auto;
-      margin: 0 auto;
-    }
-    .responsive-image-recomendaciones {
-      display: block;
-      width: clamp(450px, 90%, 1400px);
-      height: auto;
-      margin: 0 auto;
-    }
-    .responsive-image-recuerditos {
-      display: block;
-      width: clamp(250px, 45%, 250px);
-      height: auto;
-      margin: 0 auto;
-    }        
-    .responsive-image {
-      display: block;
-      width: clamp(250px, 50%, 500px);
-      height: auto;
-      margin: 0 auto;
-    }
-    .responsive-image2 {
-      display: block;
-      width: clamp(450px, 80%, 800px);
-      height: auto;
-      margin: 0 auto;
-    }
-    .responsive-programa {
-      display: block;
-      width: clamp(450px, 80%, 900px);
-      height: auto;
-      margin: 0 auto;
-    }
-    .responsive-image-vestimenta {
-      display: block;
-      width: clamp(450px, 80%, 650px);
-      height: auto;
-      margin: 0 auto;
-    } 
-    .responsive-image-recuerdos {
-      display: block;
-      width: clamp(450px, 90%, 800px);
-      height: auto;
-      margin: 0 auto;
-    }          
-  @font-face {
-    font-family: 'Amoresa';
-    src: url('fonts/Amoresa.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'GildaDisplay';
-    src: url('fonts/GildaDisplay-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  } 
-
-    h1 {
-      font-family: 'Amoresa', sans-serif;
-    }
-
-    @media (max-width: 600px) {
-      .corner {
-        width: 30vw;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <audio id="music-og" autoplay loop muted>
-    <source src="assets/audio/song.mp3" type="audio/mp3">
-  </audio>
 
-  <!-- === FIXED PAGE BORDERS === -->
+    <!-- === FIXED PAGE BORDERS === -->
   <div class="corner top-left">
     <img src="images/f23.svg" alt="Esquina superior izquierda">
   </div>
@@ -177,179 +31,158 @@
     <img src="images/f23.svg" alt="Esquina inferior derecha">
   </div>
 
-  <!-- === HERO 2 (YOUR REQUESTED CONTENT) === -->
 
 
-  <div class="hero2">
-    <img src="images/click.png" style="width:300px; cursor:pointer;" >
-
-    <img src="images/home.png" id="playBtn" alt="Reproducir musica" style="width:900px; cursor:pointer;"  />
-       <audio id="music">
-      <source src="assets/audio/song.mp3" type="audio/mp3">
-
-    </audio>
-
-     <div class="container"> 
-      <img src="images/ring.png" style="width:120px; cursor:pointer;" >
+  <!-- ===== SOBRE ===== -->
+  <div class="intro" id="intro">
+    <div class="stack" id="stack">
       
-     </div>
-     <img src="images/des.png" style="width:200px; cursor:pointer;" >
+      <img class="piece p1" src="images/envelope/envelope1.png" alt="">
+      <img class="piece p2" src="images/envelope/envelope2.png" alt="">
+      <img class="piece p3" src="images/envelope/envelope3.png" alt="">
+      <img src="images/envelope/sello.png" class="seal">
+      <button class="hit" id="hit"></button>
+    </div>
+  </div>
+
+  <!-- ===== CONTENIDO ORIGINAL DE index.html ===== -->
+  <main id="site">
+  
+
+    <div class="sector">
+      <img src="images/sound.png" style="width:300px; cursor:pointer;">
+      <img src="images/home.png" id="home-image" style="width:400px; cursor:pointer;">
+      <img src="images/des.png" style="width:150px; cursor:pointer;">
+      <div class="container">
+        <img src="images/myd.png" alt="Decoration" class="bottom-image">
+      </div>
+    </div>
+
+
+    <!-- === COUNTDOWN  === -->
+    <div class="sector-clock">
+        <img src="images/novios.png" class="responsive-image" />
+        <p class="gran-dia">¡El gran día está por llegar!</p>
+        <p class="centered-text-hero">
+            Comienza la cuenta regresiva para celebrar juntos
+        </p>
+
+        <div class="timebox">
+          <div class="time">
+            <h2 id="days">00</h2>
+            <p>Days</p>
+          </div>
+          <div class="time">
+            <h2 id="hours">00</h2>
+            <p>Hours</p>
+          </div>
+          <div class="time">
+            <h2 id="minutes">00</h2>
+            <p>Minutes</p>
+          </div>
+          <div class="time">
+            <h2 id="seconds">00</h2>
+            <p>Seconds</p>
+          </div>
+        </div>
+        <p class="centered-text-hero1">
+            Aquí encontrarás los últimos detalles
+        </p>
+
+            <div class="container">
+        <img src="images/myd.png" alt="Decoration" class="bottom-image">
+        </div>
+
+    </div>    
+ <!-- === Fecha y lugar === -->
+ <div class="sector">
+    
+    <u class="title">Fecha y Lugar</u>    
+    <a href="https://www.google.com/maps?q=Jardin+Maroma" target="_blank">
+        <img src="images/feylu.png" class="responsive-fechaylu" />
+    </a>
   </div>
 
 
-  <!-- === COUNTDOWN HERO === -->
-  <div class="hero">
-    <img src="images/novios.png" class="responsive-image" />
-    <h1>¡El gran día está por llegar!</h1>
-    <p class="centered-text-hero" font>
-        Comienza la cuenta regresiva para celebrar juntos
-    </p>
+   <div class="sector">
+    
+    <u class="title">Programa</u>
 
-    <div class="timebox">
-      <div class="time">
-        <h2 id="days">00</h2>
-        <p>Days</p>
-      </div>
-      <div class="time">
-        <h2 id="hours">00</h2>
-        <p>Hours</p>
-      </div>
-      <div class="time">
-        <h2 id="minutes">00</h2>
-        <p>Minutes</p>
-      </div>
-      <div class="time">
-        <h2 id="seconds">00</h2>
-        <p>Seconds</p>
-      </div>
-    </div>
-    <p class="centered-text-hero1">
-        Aquí encontrarás los últimos detalles
-    </p>
-
-        <div class="container">
+    <img src="images/programa.png" class="responsive-programa" />
     <img src="images/myd.png" alt="Decoration" class="bottom-image">
-    </div>
-
   </div>
-
-
-
-  <!-- === Fecha y lugar === -->
-<div class="hero2">
-<div class="title-wrapper">
-  <u class="title">Fecha y Lugar</u>
-</div>
-<a href="https://www.google.com/maps?q=Jardin+Maroma" target="_blank">
-    <img src="images/feylu.png" class="responsive-image2" />
-</a>
-
-
-
-<div class="hero2">
-  <div class="title-wrapper">
-  <u class="title">Programa</u>
-</div>
-  <img src="images/programa.png" class="responsive-programa" />
-  <img src="images/myd.png" alt="Decoration" class="bottom-image">
-</div>
 
   <!-- === Vestimenta y Regalos === -->
-<div class="hero2">
-  <div class="title-wrapper">
-  <u class="title">Código de Vestimenta</u>
-</div>
-  <img src="images/vestimenta.png" class="responsive-image-vestimenta" />
-    <p class="centered-text-hero" font>Formal</p>
-    <p class="centered-text-hero-vestuario" font>Color blanco reservado para la novia</p>    
-  <div class="title-wrapper">
-  <u class="title">Sugerencia de Regalos</u>
-  </div>  
-  <img src="images/regalos.png" class="responsive-image-regalos" />
-  <img src="images/myd.png" alt="Decoration" class="bottom-image">
-</div>
-
-
-
-
-<!-- Recomendaciones === -->
-   <div class="hero2">
-  <div class="title-wrapper">
-  <u class="title">Recomendaciones de Hospedaje</u>
-  </div>      
-   <img src="images/recomendaciones.png" class="responsive-image-recomendaciones" />
-
-    <div class="container">
+  <div class="sector">
+    <u class="title">Código de Vestimenta</u>
+    <img src="images/vestimenta.png" class="responsive-image-vestimenta" />
+    <p class="centered-text-hero">Formal</p>
+    <p class="centered-text-hero-vestuario">Color blanco reservado para la novia</p> 
+    <u class="title">Sugerencia de Regalos</u>   
+    <img src="images/regalos.png" class="responsive-image-regalos" />
     <img src="images/myd.png" alt="Decoration" class="bottom-image">
-    </div>
-    </div>
-
-
-<!-- Recuerdos === -->
-   <div class="hero2">
-      <div class="title-wrapper">
-  <u class="title">Nuestros Recuerdos</u>
-  </div>     
-   <img src="images/recuerdo1.png" class="responsive-image-recuerditos" />
-   
-<div class="gallery"> 
-  <img src="images/fotomini1.png" data-full="images/foto1.jpg" alt="Imagen 1" loading="lazy" decoding="async">
-  <img src="images/fotomini2.png" data-full="images/foto2.jpg" alt="Imagen 2" loading="lazy" decoding="async">
-  <img src="images/fotomini3.png" data-full="images/foto3.jpg" alt="Imagen 3" loading="lazy" decoding="async">
-  <img src="images/fotomini4.png" data-full="images/foto4.jpg" alt="Imagen 4" loading="lazy" decoding="async">
-</div>
-
-    <div class="container">
-    <img src="images/myd.png" alt="Decoration" class="bottom-image">
-     
-    </div>
-
-  <div class="title-wrapper">
-  <u class="title">Nuestros Recuerdos</u>
-  </div>       
-   <img src="images/recuerdo2.png" class="responsive-image-recuerditos" />
-    
-  
-<div class="gallery"> 
-  <img src="images/fotomini5.png" data-full="images/foto5.jpg" alt="Imagen 1" loading="lazy" decoding="async">
-  <img src="images/fotomini6.png" data-full="images/foto6.jpg" alt="Imagen 2" loading="lazy" decoding="async">
-  <img src="images/fotomini7.png" data-full="images/foto7.jpg" alt="Imagen 3" loading="lazy" decoding="async">
-  <img src="images/fotomini8.png" data-full="images/foto8.jpg" alt="Imagen 4" loading="lazy" decoding="async">
-</div>
-   
-   <div class="container">
-    <img src="images/myd.png" alt="Decoration" class="bottom-image">
-    </div>
-  
-  
-  
-  
-  
-  
   </div>
 
 
-
-
-
-
- <!-- === HERO 3 (EMPTY FOR NOW) === -->
-   <div class="hero2">
-    <img src="images/copas.png" class="responsive-image" />
-
-    <h1>¡Nos vemos pronto para celebrar el amor!</h1>
-
-
-    <div class="container">
+  <!-- === Vestimenta y Regalos === -->
+  <div class="sector">  
+    <u class="title">Recomendaciones de Hospedaje</u>
+    <img src="images/recomendaciones.png" class="responsive-image-recomendaciones" />
     <img src="images/myd.png" alt="Decoration" class="bottom-image">
+  </div>
+
+  <!-- Recuerdos === -->  
+  <div class="sector">
+    <u class="title">Nuestros Recuerdos</u>
+    <img src="images/recuerdo1.png" class="responsive-image-recuerditos" />
+  
+  
+    <div class="gallery"> 
+      <img src="images/fotomini1.png" data-full="images/foto1.jpg" alt="Imagen 1" loading="lazy" decoding="async">
+      <img src="images/fotomini2.png" data-full="images/foto2.jpg" alt="Imagen 2" loading="lazy" decoding="async">
+      <img src="images/fotomini3.png" data-full="images/foto3.jpg" alt="Imagen 3" loading="lazy" decoding="async">
+      <img src="images/fotomini4.png" data-full="images/foto4.jpg" alt="Imagen 4" loading="lazy" decoding="async">
     </div>
+ 
+    <u class="title">Nuestros Recuerdos</u>
+    <img src="images/recuerdo2.png" class="responsive-image-recuerditos" />
+      
+    
+    <div class="gallery"> 
+      <img src="images/fotomini5.png" data-full="images/foto5.jpg" alt="Imagen 1" loading="lazy" decoding="async">
+      <img src="images/fotomini6.png" data-full="images/foto6.jpg" alt="Imagen 2" loading="lazy" decoding="async">
+      <img src="images/fotomini7.png" data-full="images/foto7.jpg" alt="Imagen 3" loading="lazy" decoding="async">
+      <img src="images/fotomini8.png" data-full="images/foto8.jpg" alt="Imagen 4" loading="lazy" decoding="async">
     </div>
+    <img src="images/myd.png" alt="Decoration" class="bottom-image">
+  </div>
+
+  <!-- Recuerdos === -->  
+  <div class="sector">
+  <img src="images/copas.png" class="responsive-image" />
+  <p class="title">¡Nos vemos pronto para celebrar el amor!</p>
+  <img src="images/myd.png" alt="Decoration" class="bottom-image">
+  </div>
+
+  </main>
+
+    <!-- Recuerdos === -->  
+  <div class="sector">
+
+  <!-- GALERIA -->
   <div class="modal" id="modal" aria-hidden="true">
     <span class="close" aria-label="Cerrar">&times;</span>
     <img class="modal-img" id="modalImg" alt="Imagen ampliada">
-  </div>
+  </div>  
 
+  <!-- AUDIO -->
+  <audio id="music" loop>
+    <source src="assets/audio/song.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- TU JS ORIGINAL -->
   <script src="js/script.js"></script>
-
+  <script src="js/script-clock.js"></script>
+  <script src="js/script-galeria.js"></script>
 </body>
 </html>
