@@ -104,7 +104,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: clamp(10px, 2svh, 22px);
+  bottom: clamp(60px, 10svh, 110px); /* antes estaba más bajo */
   display: flex;
   justify-content: center;
   pointer-events: none;
@@ -116,6 +116,16 @@
   max-height: 10svh;
   height: auto;
   object-fit: contain;
+}
+
+@media (min-width: 900px){
+  .hero-bottom{
+    bottom: 120px;   /* lo sube bastante en desktop */
+  }
+
+  .hero-myd{
+    width: 200px;    /* tamaño fijo elegante en PC */
+  }
 }
 
 @media (max-width: 420px){
