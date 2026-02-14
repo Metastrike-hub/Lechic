@@ -74,7 +74,7 @@
 .sector.sector-hero{
   min-height: 100svh;           /* mejor que 100vh en móvil */
   padding: clamp(16px, 4vw, 40px);
-  padding-bottom: clamp(70px, 14vw, 140px); /* espacio para la imagen de abajo */
+  padding-bottom: clamp(30px, 6vw, 60px); /* espacio para la imagen de abajo */
   gap: clamp(10px, 2.2vw, 18px);
 }
 
@@ -98,7 +98,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: clamp(8px, 2.5vw, 18px);
+  bottom: -8px;
   display: flex;
   justify-content: center;
   pointer-events: none;
@@ -109,6 +109,7 @@
   max-height: 18svh;                /* evita que se coma la pantalla */
   height: auto;
   object-fit: contain;
+  margin-top: -10px;
 }
 
 @media (max-width: 420px){
