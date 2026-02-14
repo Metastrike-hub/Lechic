@@ -70,46 +70,52 @@
 
 
 
-/* ====== SECTOR 1 (HERO) RESPONSIVO ====== */
+/* ===== HERO layout: rojo centrado, M&D fijo abajo ===== */
 .sector.sector-hero{
-  min-height: 100svh;           /* mejor que 100vh en móvil */
+  min-height: 100svh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  /* importante: no uses center aquí */
+  justify-content: flex-start;
+
   padding: clamp(16px, 4vw, 40px);
-  padding-bottom: clamp(30px, 6vw, 60px); /* espacio para la imagen de abajo */
-  gap: clamp(10px, 2.2vw, 18px);
 }
 
-.hero-sound{
-  width: clamp(160px, 45vw, 300px);
-  height: auto;
-}
+/* este bloque (zona roja) ocupa el alto disponible y se centra */
+.hero-content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  /* <-- centra verticalmente la zona roja */
+  gap: clamp(8px, 2vw, 14px);
 
-.hero-home{
-  width: clamp(220px, 70vw, 420px);
-  height: auto;
+  /* deja “espacio reservado” para el M&D, evita que se encime */
+  padding-bottom: clamp(90px, 16svh, 150px);
 }
+.hero-sound{ width: clamp(160px, 45vw, 300px); height:auto; }
+.hero-home{  width: clamp(220px, 70vw, 420px); height:auto; }
+.hero-des{   width: clamp(120px, 35vw, 160px); height:auto; }
 
-.hero-des{
-  width: clamp(120px, 35vw, 160px);
-  height: auto;
-}
-
-/* La decoración de abajo “pegada” al fondo, centrada */
+/* M&D abajo fijo */
 .hero-bottom{
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -8px;
+  bottom: clamp(10px, 2svh, 22px);
   display: flex;
   justify-content: center;
   pointer-events: none;
 }
 
+/* M&D más pequeño */
 .hero-myd{
-  width: clamp(180px, 55vw, 360px); /* más pequeño */
-  max-height: 18svh;                /* evita que se coma la pantalla */
+  width: clamp(120px, 34vw, 220px);
+  max-height: 10svh;
   height: auto;
   object-fit: contain;
-  margin-top: -10px;
 }
 
 @media (max-width: 420px){
