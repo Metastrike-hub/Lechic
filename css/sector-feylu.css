@@ -242,3 +242,19 @@
   width: clamp(110px, 32vw, 200px);
   max-height: 9svh;
 }
+
+
+.hero-bottom--flow{
+  position: static !important;
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-myd--flow{
+  width: clamp(110px, 32vw, 200px);
+  max-height: 9svh;
+  height: auto;
+  object-fit: contain;
+}
