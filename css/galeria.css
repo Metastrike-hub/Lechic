@@ -21,8 +21,16 @@
 }
 /* Responsive móvil */
 @media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
+  .gallery{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 16px auto;  /* menos margen vertical */
+    padding: 8px;
+  }
+
+  .gallery img{
+    aspect-ratio: 3 / 4;   /* menos alto que 3/5 para que no “tape” */
+    border-radius: 12px;
   }
 }
 
