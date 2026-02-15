@@ -237,6 +237,53 @@
   justify-content: center;
 }
 
+
+.responsive-image-vestimenta{
+  display: block;
+  margin: 0 auto;                 /* centra */
+  width: 100%;                    /* usa el ancho del contenedor */
+  max-width: min(92vw, 900px);    /* límite responsivo */
+  height: auto;
+}
+
+.responsive-image-regalos{
+  display: block;
+  margin: 0 auto;                 /* centra */
+  width: 100%;                    /* usa el ancho del contenedor */
+  max-width: min(92vw, 900px);    /* límite responsivo */
+  height: auto;
+}
+
+.responsive-image-recomendaciones{
+  display: block;
+  width: 100%;
+  height: auto;
+  width: calc(100% + 20px);
+  margin-left: -30px;
+  margin-right: -30px;
+  
+}
+
+.title-with-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* mantiene el bloque centrado */
+  gap: 12px;
+  position: relative;
+}
+
+/* Ajuste del título */
+.title-with-icon .title{
+  margin: 0;
+}
+
+/* Icono pequeño */
+.icon-chinchita{
+  width: 32px;
+  position: relative;
+  top: -6px; 
+}
+
 /* Tamaño elegante del M&D */
 .sector-vestimenta .hero-myd{
   width: clamp(110px, 32vw, 200px);
