@@ -24,6 +24,29 @@ function unlockScroll() {
   window.removeEventListener("touchmove", preventScroll, { passive: false });
 }
 
+/* PREVENIR PINCH-ZOOM / GESTOS (iOS Safari) */
+function preventGesture(e) {
+  e.preventDefault();
+}
+
+function lockGestures() {
+  window.addEventListener("gesturestart", preventGesture, { passive: false });
+  window.addEventListener("gesturechange", preventGesture, { passive: false });
+  window.addEventListener("gestureend", preventGesture, { passive: false });
+
+  modal.addEventListener("touchmove", preventGesture, { passive: false });
+  modalImg.addEventListener("touchmove", preventGesture, { passive: false });
+}
+
+function unlockGestures() {
+  window.removeEventListener("gesturestart", preventGesture, { passive: false });
+  window.removeEventListener("gesturechange", preventGesture, { passive: false });
+  window.removeEventListener("gestureend", preventGesture, { passive: false });
+
+  modal.removeEventListener("touchmove", preventGesture, { passive: false });
+  modalImg.removeEventListener("touchmove", preventGesture, { passive: false });
+}
+
 /* ABRIR MODAL */
 images.forEach(img => {
   img.addEventListener("click", () => {
@@ -31,6 +54,7 @@ images.forEach(img => {
     const full = img.dataset.full || img.src;
     modalImg.src = full;
     lockScroll();
+    lockGestures();
   });
 });
 
@@ -38,6 +62,7 @@ images.forEach(img => {
 function closeModal() {
   modal.style.display = "none";
   unlockScroll();
+    unlockGestures();
 }
 
 close.addEventListener("click", closeModal);
