@@ -144,3 +144,23 @@
 }
 
 
+.sector.sector-fechaylugar{
+  min-height: auto;
+  padding-top: 24px;
+  padding-bottom: 8px;  /* <-- reduce al mínimo el espacio antes de Programa */
+  gap: 12px;
+}
+
+/* centra el link y la imagen */
+.sector-fechaylugar .map-link{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.responsive-fechaylu{
+  display: block;
+  margin: 0 auto;                /* centra */
+  width: min(92vw, 720px);       /* responsivo */
+  height: auto;
+}

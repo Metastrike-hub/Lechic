@@ -22,14 +22,7 @@ html, body {
     font-family: 'Amoresa', sans-serif;
 } 
 
-.timebox{
-    display: flex;
-    gap: 90px;
-}
 
-.time{
-    text-align: center;
-}
 
 .centered-text-hero {
     font-size: 20px;
@@ -88,39 +81,41 @@ html, body {
   margin-top: 8px;
 }
 
-/* CONTENEDOR */
+/* === COUNTDOWN layout centrado y responsive === */
 .sector-countdown .timebox{
-  width: min(92vw, 560px);
-  margin: 16px auto 10px;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: clamp(10px, 4vw, 48px);
+  justify-items: center;
+  align-items: end;
   text-align: center;
 }
 
-/* CADA BLOQUE */
+
 .sector-countdown .time{
   display: flex;
   flex-direction: column;
-  align-items: center;   /* 🔥 esto centra TODO perfectamente */
+  align-items: center;
   justify-content: center;
 }
 
-/* NÚMEROS */
+
 .sector-countdown .time h2{
   margin: 0;
   font-size: clamp(30px, 7.5vw, 64px);
   line-height: 1;
   font-weight: 300;
-  width: 100%;           /* 🔥 clave */
-  text-align: center;    /* 🔥 clave */
+  width: 100%;
+  text-align: center;
 }
 
-/* TEXTO */
+
 .sector-countdown .time p{
   margin: 6px 0 0;
   font-size: 13px;
+  line-height: 1.1;
   font-weight: 300;
-  width: 100%;           /* 🔥 clave */
-  text-align: center;    /* 🔥 clave */
+  width: 100%;
+  text-align: center;
 }
