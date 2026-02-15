@@ -220,3 +220,25 @@
     max-height: none;                 /* deja que ocupe lo que necesite */
   }
 }
+
+
+
+.sector-vestimenta{
+  min-height: auto;            /* que mida lo que necesita */
+  padding-bottom: 24px;
+  position: relative;
+}
+
+/* En esta sección NO queremos absolute */
+.sector-vestimenta .hero-bottom{
+  position: static;            /* 🔥 clave */
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Tamaño elegante del M&D */
+.sector-vestimenta .hero-myd{
+  width: clamp(110px, 32vw, 200px);
+  max-height: 9svh;
+}
