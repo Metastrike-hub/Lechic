@@ -2,6 +2,30 @@ const images = document.querySelectorAll(".gallery img");
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modalImg");
 const close = document.querySelector(".close");
+const viewportMeta = document.querySelector('meta[name="viewport"]');
+const originalViewport = viewportMeta ? viewportMeta.getAttribute("content") : null;
+
+function forceViewportResetOnOpen() {
+  // Si no hay meta viewport, no podemos hacer nada
+  if (!viewportMeta) return;
+
+  // Fuerza scale=1 y desactiva zoom mientras el modal está abierto
+  viewportMeta.setAttribute(
+    "content",
+    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+  );
+
+  // algunos navegadores lo aplican mejor con un “reflow”
+  setTimeout(() => window.scrollTo(0, 0), 0);
+}
+
+function restoreViewportOnClose() {
+  if (!viewportMeta || !originalViewport) return;
+
+  // Restaurar lo que tenías antes
+  viewportMeta.setAttribute("content", originalViewport);
+}
+
 
 /* PREVENIR SCROLL REAL (móvil + desktop) */
 function preventScroll(e) {
@@ -50,6 +74,7 @@ function unlockGestures() {
 /* ABRIR MODAL */
 images.forEach(img => {
   img.addEventListener("click", () => {
+    forceViewportResetOnOpen(); 
     modal.style.display = "flex";
     const full = img.dataset.full || img.src;
     modalImg.src = full;
@@ -63,6 +88,7 @@ function closeModal() {
   modal.style.display = "none";
   unlockScroll();
     unlockGestures();
+    restoreViewportOnClose();  
 }
 
 close.addEventListener("click", closeModal);
