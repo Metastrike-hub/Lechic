@@ -20,7 +20,7 @@
       aspect-ratio:380/676;
     }
 /* 🔥 SELLO EN EL VÉRTICE */
-.seal{
+.seal-wrap{
   position:absolute;
 
   /* 🔥 Ajustado más al centro del cruce */
@@ -34,7 +34,26 @@
 
   z-index: 20;
   pointer-events:none;
+
 }
+
+
+.seal{
+  width: clamp(120px, 24%, 180px);
+  height: auto;
+  display: block;
+  transform-origin: center;
+  will-change: transform;
+  animation: sealPulse 2s infinite;
+}
+
+/* Animación solo de escala, sin mover */
+@keyframes sealPulse{
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
 .piece{
       position:absolute;
       inset:0;
