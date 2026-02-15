@@ -164,3 +164,59 @@
   width: min(92vw, 720px);       /* responsivo */
   height: auto;
 }
+
+
+
+.sector.sector-programa{
+  min-height: 100svh;              /* NO 150svh */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: clamp(16px, 4vw, 40px);
+  padding-bottom: clamp(120px, 18svh, 200px); /* <-- reserva espacio para el M&D */
+  gap: 14px;
+}
+
+.responsive-programa{
+  width: min(92vw, 820px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+  object-fit: contain;
+}
+
+.hero-bottom--programa{
+  bottom: clamp(10px, 2svh, 18px);
+}
+
+.hero-myd--programa{
+  width: clamp(120px, 30vw, 220px); /* un poco más discreto en este sector */
+  max-height: 10svh;
+}
+
+
+/* ===== Programa: en móvil, NO absoluto para evitar espacio muerto ===== */
+@media (max-width: 768px){
+  .sector.sector-programa{
+    min-height: auto;                 /* que mida lo que necesita */
+    padding-bottom: 24px;             /* mucho menos */
+  }
+
+  .sector-programa .hero-bottom{
+    position: static;                 /* vuelve al flujo normal */
+    margin-top: 14px;
+    padding-bottom: 0;
+  }
+
+  .sector-programa .hero-myd{
+    width: clamp(110px, 34vw, 200px);
+    max-height: 9svh;
+  }
+
+  .sector-programa .responsive-programa{
+    max-height: none;                 /* deja que ocupe lo que necesite */
+  }
+}
